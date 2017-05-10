@@ -49,17 +49,19 @@ module RiakAgent
       end
 
       @metrics = [
-        Metric.new('vnode_gets_total', 'VNode/Gets/Total', 'Operations'),
+        Metric.new('vnode_puts_total', 'VNode/Puts/Total', 'Operations'),
         Metric.new('vnode_puts_total', 'VNode/Puts/Total', 'Operations'),
         Metric.new('read_repairs_total', 'Read Repairs/Total', 'Repairs'),
         Metric.new('coord_redirs_total', 'Node/Redirects/Total', 'Redirects'),
         Metric.new('node_gets_total', 'Node/Gets/Total', 'Operations'),
+        Metric.new('node_gets', 'Node/Gets/Current', 'Operations'),
         Metric.new('node_get_fsm_time_mean', 'Node/Get/FSM/Time/Mean', 'Microseconds'),
         Metric.new('node_get_fsm_time_median', 'Node/Get/FSM/Time/Median', 'Microseconds'),
         Metric.new('node_get_fsm_time_95', 'Node/Get/FSM/Time/95', 'Microseconds'),
         Metric.new('node_get_fsm_time_99', 'Node/Get/FSM/Time/99', 'Microseconds'),
         Metric.new('node_get_fsm_time_100', 'Node/Get/FSM/Time/100', 'Microseconds'),
         Metric.new('node_puts_total', 'Node/Puts/Total', 'Operations'),
+        Metric.new('node_puts', 'Node/Puts/Current', 'Operations'),
         Metric.new('node_put_fsm_time_mean', 'Node/Put/FSM/Time/Mean', 'Microseconds'),
         Metric.new('node_put_fsm_time_median', 'Node/Put/FSM/Time/Median', 'Microseconds'),
         Metric.new('node_put_fsm_time_95', 'Node/Put/FSM/Time/95', 'Microseconds'),
@@ -113,7 +115,9 @@ module RiakAgent
         Metric.new('search_query_throughput_one', 'Search/Query/Throughput/One', 'Operations'),
         Metric.new('vnode_counter_update_total', 'VNode/Counter/Update/Total', 'Operations'),
         Metric.new('vnode_map_update_total', 'VNode/Map/Update/Total', 'Operations'),
-        Metric.new('vnode_set_update_total', 'VNode/Set/Update/Total', 'Operations')
+        Metric.new('vnode_set_update_total', 'VNode/Set/Update/Total', 'Operations'),
+        Metric.new('vnode_index_reads', 'SecondaryIndex/Read/VNodes/Total', 'Operations'),
+        Metric.new('vnode_index_writes', 'SecondaryIndex/Write/VNodes/Total', 'Operations'),
       ]
     end
 

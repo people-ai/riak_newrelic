@@ -1,9 +1,9 @@
-#Title: New Relic Riak Agent
+# Title: New Relic Riak Agent
 
-##Description:
+## Description:
 The New Relic Riak Agent serves node statistics of a Riak Node to the New Relic APM System via the web API available for plugins. The plugin is written in Ruby, with the code available on github under Apache 2.0 License.
 
-##Plugin Requirements:
+## Plugin Requirements:
 
    * Install [Riak](http://docs.basho.com/riak/latest/tutorials/installation/).
    * Ruby >= 1.8.7
@@ -11,25 +11,25 @@ The New Relic Riak Agent serves node statistics of a Riak Node to the New Relic 
    * Bundler >= 1.3.0
    * Git >= 1.8
 
-##Installation:
+## Installation:
 
    * Download this repository to the folder you'd like to execute it from.
    * Navigate to the folder that the plugin is downloaded to.
    * Run `bundle install`
-   * Copy ```config/newrelic_plugin.example.yml``` to ```config/newrelic_plugin.yml```
-   * Edit ```config/newrelic_plugin.yml```, replacing `LICENSE` with your New Relic License key.
+   * Copy `config/newrelic_plugin.example.yml` to `config/newrelic_plugin.yml`
+   * Edit `config/newrelic_plugin.yml`, replacing `LICENSE` with your New Relic License key.
    * Edit the riak_agent.rb file and change the GUID to something unique to your application (it's set by default to 'com.basho.riak_agent')
    * Run `bundle exec ./riak_agent.rb` or `./riak_agent.rb` to start.
- 
+
 ## Testing
 
-* Create ```newrelic.key``` that just contains your New Relic license key:
+* Create `newrelic.key` that just contains your New Relic license key:
 
 		aabbccddeeffgg
 
-* Run ```vagrant up``` ([Vagrant](https://www.vagrantup.com/))
+* Run `vagrant up` ([Vagrant](https://www.vagrantup.com/))
 
-##Summary of Metrics:
+## Summary of Metrics:
 
 For more information on the meaning of these metrics, please visit [docs.basho.com](http://docs.basho.com/riak/latest/ops/running/nodes/inspecting/).
 
@@ -40,12 +40,14 @@ For more information on the meaning of these metrics, please visit [docs.basho.c
 | read_repairs_total | Read Repairs/Total | Repairs |
 | coord_redirs_total | Node/Redirects/Total | Redirects |
 | node_gets_total | Node/Gets/Total | Operations |
+| node_gets | Node/Gets/Current | Operations |
 | node_get_fsm_time_mean | Node/Get/FSM/Time/Mean | Microseconds |
 | node_get_fsm_time_median | Node/Get/FSM/Time/Median | Microseconds |
 | node_get_fsm_time_95 | Node/Get/FSM/Time/95 | Microseconds |
 | node_get_fsm_time_99 | Node/Get/FSM/Time/99 | Microseconds |
 | node_get_fsm_time_100 | Node/Get/FSM/Time/100 | Microseconds |
 | node_puts_total | Node/Puts/Total | Operations |
+| node_puts | Node/Puts/Current | Operations |
 | node_put_fsm_time_mean | Node/Put/FSM/Time/Mean | Microseconds |
 | node_put_fsm_time_median | Node/Put/FSM/Time/Median | Microseconds |
 | node_put_fsm_time_95 | Node/Put/FSM/Time/95 | Microseconds |
@@ -100,3 +102,5 @@ For more information on the meaning of these metrics, please visit [docs.basho.c
 | vnode_counter_update_total | Vnode/Counter/Update/Total | Operations |
 | vnode_map_update_total | Vnode/Map/Update/Total | Operations |
 | vnode_set_update_total | Vnode/Set/Update/Total | Operations |
+| vnode_index_reads | SecondaryIndex/Read/VNodes/Total | Operations |
+| vnode_index_writes | SecondaryIndex/Write/VNodes/Total | Operations |
