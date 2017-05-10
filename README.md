@@ -66,6 +66,7 @@ For more information on the meaning of these metrics, please visit [docs.basho.c
 | precommit_fail | Failures/Pre-commit | Failures |
 | postcommit_fail | Failures/Post-commit | Failures |
 | sys_process_count | Sys/Processes/Total | Processes |
+| sys_global_heap_size | Sys/HeapSize | Bytes |
 | pbc_connects_total | PBC/Connections/Total | Connections |
 | pbc_active | PBC/Connections/Active | Connections |
 | memory_processes_used | Memory/Used/Processes | Bytes |

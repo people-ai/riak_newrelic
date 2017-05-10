@@ -80,6 +80,7 @@ module RiakAgent
         Metric.new('precommit_fail', 'Failures/Pre-commit', 'Failures'),
         Metric.new('postcommit_fail', 'Failures/Post-commit', 'Failures'),
         Metric.new('sys_process_count', 'Sys/Processes/Total', 'Processes'),
+        Metric.new('sys_global_heaps_size', 'Sys/HeapSize', 'Bytes'),
         Metric.new('pbc_connects_total', 'PBC/Connections/Total', 'Connections'),
         Metric.new('pbc_active', 'PBC/Connections/Active', 'Connections'),
         Metric.new('memory_processes_used', 'Memory/Used/Processes', 'Bytes'),
