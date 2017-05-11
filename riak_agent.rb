@@ -52,6 +52,7 @@ module RiakAgent
         Metric.new('vnode_puts_total', 'VNode/Puts/Total', 'Operations'),
         Metric.new('vnode_puts_total', 'VNode/Puts/Total', 'Operations'),
         Metric.new('read_repairs_total', 'Read Repairs/Total', 'Repairs'),
+        Metric.new('read_repairs', 'Read Repairs/Current', 'Repairs'),
         Metric.new('coord_redirs_total', 'Node/Redirects/Total', 'Redirects'),
         Metric.new('node_gets_total', 'Node/Gets/Total', 'Operations'),
         Metric.new('node_gets', 'Node/Gets/Current', 'Operations'),
